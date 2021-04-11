@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.groupinsy.omr.controller.model.Movie;
-import com.groupinsy.omr.controller.service.MovieService;
+import com.groupinsy.omr.model.Movie;
+import com.groupinsy.omr.service.MovieService;
 
 @Controller
 public class DashboardController {

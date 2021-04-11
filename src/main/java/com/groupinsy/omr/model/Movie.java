@@ -1,4 +1,4 @@
-package com.groupinsy.omr.controller.model;
+package com.groupinsy.omr.model;
 
 public class Movie {
 	private Integer id;

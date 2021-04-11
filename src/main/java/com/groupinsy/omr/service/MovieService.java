@@ -1,12 +1,12 @@
-package com.groupinsy.omr.controller.service;
+package com.groupinsy.omr.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.groupinsy.omr.controller.mapper.MovieMapper;
-import com.groupinsy.omr.controller.model.Movie;
+import com.groupinsy.omr.mapper.MovieMapper;
+import com.groupinsy.omr.model.Movie;
 
 @Service
 public class MovieService {
