@@ -1,10 +1,13 @@
 package com.groupinsy.omr.model;
 
 public class Movie {
+	
 	private Integer id;
 	private String name;
 	private String genre;
 	private Double price;
+	private String movieLink;
+	
 	public Integer getId() {
 		return id;
 	}
@@ -28,6 +31,16 @@ public class Movie {
 	}
 	public void setPrice(Double price) {
 		this.price = price;
+	}
+	
+	
+	
+	
+	public String getMovieLink() {
+		return movieLink;
+	}
+	public void setMovieLink(String movieLink) {
+		this.movieLink = movieLink;
 	}
 	@Override
 	public String toString() {

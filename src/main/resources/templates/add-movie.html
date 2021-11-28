@@ -9,6 +9,8 @@
 
     <title>Dashboard Template for Bootstrap</title>
 
+<base th:href="@{/}"/>
+
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/dashboard/">
 
     <!-- Bootstrap core CSS -->
@@ -16,6 +18,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/dashboard.css" rel="stylesheet">
+    
   </head>
 
   <body>
@@ -45,15 +48,20 @@
           </div>
 
 
-          <h3>Add Movie</h3>
+          <h3>Add/Update Movie</h3>
+          
+          <span th:if="${errorMessage}"  th:text="${errorMessage}">Error</span>
+          
+          
           <div class="table-responsive">
             
             
-            <form class="needs-validation" novalidate="" th:action="@{/save-movie}" th:object="${movie}" method="post">
+            <form class="needs-validation" novalidate="" th:action="@{/save-movie}" th:object="${movie}" method="post" enctype="multipart/form-data">
+
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName">Movie Name</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required="" th:field="*{name}">
+                <input type="text" class="form-control" placeholder="" value="" required="" th:field="*{name}">
                 <div class="invalid-feedback">
                   Valid movie name is required.
                 </div>
@@ -65,7 +73,7 @@
 			<div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName">Genre</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required="" th:field="*{genre}">
+                <input type="text" class="form-control" placeholder="" value="" required="" th:field="*{genre}">
                 <div class="invalid-feedback">
                   Valid Genre is required.
                 </div>
@@ -76,10 +84,28 @@
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName">Price</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required="" th:field="*{price}">
+                <input type="text" class="form-control" placeholder="" value="" required="" th:field="*{price}">
                 <div class="invalid-feedback">
                   Valid Price is required.
                 </div>
+              </div>
+              
+            </div>
+            
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Thumbnail</label>
+                <input type="file" name="thumbnail" class="form-control-file">
+                
+              </div>
+              
+            </div>
+            
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Movie</label>
+                <input type="file" name="movieFile" class="form-control-file">
+                
               </div>
               
             </div>

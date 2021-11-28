@@ -6,4 +6,26 @@
 	<select id="getMovies" resultType="com.groupinsy.omr.model.Movie">
 		select * from movie;
 	</select>
+	
+	<insert id="insertMovie" parameterType="com.groupinsy.omr.model.Movie"> 
+	
+		insert into movie(id,name,genre,price,movie_link) values(#{id},#{name},#{genre},#{price},#{movieLink})
+	
+	</insert>
+	
+	<update id="updateMovie" parameterType="com.groupinsy.omr.model.Movie"> 
+	
+		update movie set name=#{name}, genre=#{genre}, price=#{price}, movie_link=#{movieLink} where id=#{id}
+	
+	</update>
+	
+	<delete id="deleteMovie" parameterType="int">
+        delete from movie where id = #{id}
+    </delete>
+	
+	
+	<select id="getMovieById" resultType="com.groupinsy.omr.model.Movie">
+		select * from movie where id=${id}
+	</select>
+	
 </mapper>

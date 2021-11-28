@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper	namespace="com.groupinsy.omr.mapper.UserMapper">
+		
+	<insert id="registerNewUserAccount" parameterType="com.groupinsy.omr.model.UserDto"> 
+	
+		insert into users(fullname,username,password,rolename) values(#{fullname},#{username},#{password},#{rolename})
+	
+	</insert>
+	
+	<select id="findByEmail"> 
+	
+		select fullname,username,password,rolename ) values(#{fullname},#{username},#{password},#{rolename})
+	
+	</select>
+	
+	
+</mapper>

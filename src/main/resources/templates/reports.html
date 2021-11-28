@@ -40,43 +40,29 @@
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-            <h1 class="h2">Dashboard</h1>
+            <h1 class="h2">Reports</h1>
             <div class="btn-toolbar mb-2 mb-md-0">
-              <div class="btn-group mr-2">
-                <a class="btn btn-sm btn-outline-secondary" href="/add-movie">Add New Movie</a>
-              </div>
+              
             </div>
           </div>
 
 
-          <h3>Movie Management</h3>
-          <div class="table-responsive">
-            <table class="table table-striped table-sm">
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Movie</th>
-                  <th>Genre</th>
-                  <th>Price</th>
-                  <th>Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-              
-              
-                <tr th:each="movie : ${movies}">
-                  <td th:text="${movie.id}"></td>
-                  <td th:text="${movie.name}"></td>
-                  <td th:text="${movie.genre}"></td>
-                  <td th:text="${movie.price}"></td>
-                  <td><a th:href="@{'/edit-movie/'+${movie.id}}">Edit</a>
-                  <a th:href="@{'/delete-movie/'+${movie.id}}"> Delete</a></td>
-                </tr>
-                
-                
-              </tbody>
-            </table>
-          </div>
+<table class="table">
+
+  <tbody>
+    <tr>
+      <th scope="row">Rental Report </th>
+      <td><a href="#">View Report</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Sales Report</th>
+      <td><a href="#">View Report</a></td>
+    </tr>
+
+  </tbody>
+</table>
+
+
         </main>
       </div>
     </div>

@@ -11,7 +11,13 @@ public interface MovieMapper {
 	
 	
 	List<Movie> getMovies();
+
+	void insertMovie(Movie movie);
 	
+	void updateMovie(Movie movie);
 	
+	void deleteMovie(Integer id);
+	
+	Movie getMovieById(Integer id);
 
 }

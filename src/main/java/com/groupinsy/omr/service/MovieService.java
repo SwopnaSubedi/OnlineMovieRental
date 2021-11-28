@@ -19,6 +19,25 @@ public class MovieService {
 	public List<Movie> getMovies(){
 		return movieMapper.getMovies();
 	}
+	
+	public void saveMovie(Movie movie) {
+		if(movie.getId() != null)
+		{
+			movieMapper.updateMovie(movie);
+		}else {
+			movieMapper.insertMovie(movie);
+		}
+		
+	}
+	
+	public void deleteMovie(Integer id)
+	{
+		movieMapper.deleteMovie(id);
+	}
+	
 
+	public Movie getMovieById(Integer id) {
+		return movieMapper.getMovieById(id);
+	}
 
 }
